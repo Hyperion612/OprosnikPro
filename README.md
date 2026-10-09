@@ -2,6 +2,8 @@
 
 Современное SPA-приложение для создания, проведения и анализа опросов.
 
+![Deploy](https://github.com/Hyperion612/Survey_Pro-v.2/actions/workflows/deploy.yml/badge.svg)
+
 ## ✨ Возможности
 
 - 📝 Создание опросов с 3 типами вопросов (один вариант, рейтинг, текст)
@@ -27,6 +29,7 @@
 - Tailwind CSS
 - Chart.js
 - Vite
+- GitHub Actions (автоматический деплой)
 
 ## 📦 Установка и запуск
 
@@ -46,34 +49,29 @@ npm run preview
 
 ## 🌐 Деплой на GitHub Pages
 
-### Быстрый способ
+### ⭐ Рекомендуемый способ: GitHub Actions (автоматический деплой)
 
-1. Соберите проект:
-   ```bash
-   npm run build
-   ```
+**Самый простой и надёжный способ!** Автоматический деплой при каждом push в main.
 
-2. Загрузите содержимое папки `dist/` в репозиторий:
-   ```bash
-   cd dist
-   git init
-   git add .
-   git commit -m "Deploy"
-   git remote add origin https://github.com/username/repo-name.git
-   git branch -M main
-   git push -u origin main --force
-   ```
+🚀 **Быстрый старт (3 шага):** [QUICK_START.md](./QUICK_START.md)
 
-3. Настройте GitHub Pages:
-   - Settings → Pages
-   - Source: Deploy from a branch → `main` / `/ (root)`
-   - Save
+1. Включите GitHub Pages: **Settings → Pages → Source: GitHub Actions**
+2. Запушьте код в main: `git push origin main`
+3. Дождитесь завершения workflow в разделе **Actions**
+4. Откройте сайт: `https://ваш-username.github.io/имя-репозитория/`
 
-4. Откройте сайт: `https://username.github.io/repo-name/`
+📖 Подробная инструкция: [GITHUB_ACTIONS.md](./GITHUB_ACTIONS.md)
 
-### Подробная инструкция
+### Альтернативный способ: Ручной деплой
 
-См. [DEPLOY.md](./DEPLOY.md)
+Если вам нужен ручной контроль над деплоем:
+
+1. Соберите проект: `npm run build`
+2. Загрузите содержимое папки `dist/` в репозиторий
+3. Настройте GitHub Pages: Settings → Pages → Source: Deploy from a branch
+
+📖 Подробная инструкция: [DEPLOY.md](./DEPLOY.md)  
+📋 Чек-лист проверки: [CHECKLIST.md](./CHECKLIST.md)
 
 ## 🔧 Конфигурация
 
